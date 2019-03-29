@@ -101,6 +101,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
+            // QRコード文字列をラベルに表示
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
             }
